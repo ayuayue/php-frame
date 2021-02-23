@@ -29,3 +29,19 @@ if (!function_exists('view')) {
 
     }
 }
+if (!function_exists('base_path')){
+    function base_path($path = ''){
+        return __DIR__ . ($path?DIRECTORY_SEPARATOR.$path:'');
+    }
+}
+if (!function_exists('public_path')){
+    function public_path($path = ''){
+        return base_path('public') . ($path?DIRECTORY_SEPARATOR.$path:'');
+    }
+}
+if (!function_exists('storage_path')) {
+    function storage_path($path = '')
+    {
+        return base_path('storage') . ($path ? DIRECTORY_SEPARATOR . $path : '');
+    }
+}

@@ -2,4 +2,4 @@
 
 $router = new League\Route\Router;
 
-require_once __DIR__ . '/../../routes/web.php';
+require_once base_path('routes/web.php');
