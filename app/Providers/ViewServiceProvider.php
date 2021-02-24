@@ -25,7 +25,7 @@ class ViewServiceProvider extends AbstractServiceProvider
             $loader = new \Twig\Loader\FilesystemLoader($this->viewPath);
 
             $twig = new \Twig\Environment($loader, [
-                'cache' => false,
+                'cache' => config('twig.cache_enable') ? $this->cachePath : false,
             ]);
             return $twig;
         });

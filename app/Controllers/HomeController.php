@@ -6,7 +6,7 @@ class HomeController
 {
     public function index($request)
     {
-        $name = 'caoayu';
+        $name = app('config')->get('name');
         return view('index.twig', compact('name'));
     }
 }

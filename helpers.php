@@ -45,3 +45,9 @@ if (!function_exists('storage_path')) {
         return base_path('storage') . ($path ? DIRECTORY_SEPARATOR . $path : '');
     }
 }
+if (!function_exists('config')) {
+    function config($key = '')
+    {
+        return app('config')->get($key);
+    }
+}
