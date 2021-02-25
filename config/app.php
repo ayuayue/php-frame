@@ -2,5 +2,10 @@
 
 return [
     'name' => 'caoayu',
-    'debug' => true
+    'debug' => true,
+
+    'providers' => [
+        App\Providers\AppServiceProvider::class,
+        App\Providers\ViewServiceProvider::class
+    ]
 ];
