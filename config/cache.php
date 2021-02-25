@@ -3,7 +3,6 @@
 return [
     'enable' => true,
     'twig' => [
-        'cache_enable' => false,
-
+        'cache_enable' => env('APP_CACHE',false),
     ]
 ];
