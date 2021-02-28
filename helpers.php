@@ -87,4 +87,9 @@ if (!function_exists('cookie')) {
         return app('cookie');
     }
 }
-
+if (!function_exists('db')) {
+    function db($name)
+    {
+        return app('db')::table($name);
+    }
+}

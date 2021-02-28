@@ -2,19 +2,20 @@
 
 namespace App\Controllers;
 
-use App\Models\Person;
+use App\Models\User;
 
 class HomeController
 {
     public function index($request)
     {
-//        cookie()->set([
-//            'name'=>'1',
-//            'a'=>1
+//        $table = new Tables();
+//        dump($table->createUser());
+//        $user = app('db')::table('users')->insert([
+//            'name' => 'lihua',
+//            'email' => '123',
+//            'password' => '123456'
 //        ]);
-        cookie()->del('a','name','age');
-        $user = 123;
-//        $user = Person::find(1);
+        dump(app('db')::table('users')->get());
         return view('index.twig', compact('user'));
     }
 }
