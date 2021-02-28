@@ -75,3 +75,16 @@ if (!function_exists('config')) {
         return app('config')->get($key);
     }
 }
+if (!function_exists('session')) {
+    function session()
+    {
+        return app('session');
+    }
+}
+if (!function_exists('cookie')) {
+    function cookie()
+    {
+        return app('cookie');
+    }
+}
+
